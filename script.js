@@ -67,16 +67,22 @@ const restartGame = () => {
 const startGame = (difficulty) => {
     switch (difficulty) {
         case 'easy':
-            gameSpeed = 200; // Slower speed for easy
+            gameSpeed = 125; // Slower speed for easy
             break;
         case 'medium':
-            gameSpeed = 125; // Medium speed
+            gameSpeed = 100; // Medium speed
             break;
         case 'hard':
             gameSpeed = 75; // Faster speed for hard
             break;
+        case 'insane':
+            gameSpeed = 30; // Faster speed for hard
+            break;
+        case 'random':
+            gameSpeed = Math.floor(Math.random()*200);
+            break;
     }
-
+   
     // Hide the difficulty modal
     document.getElementById("difficultyModal").style.display = "none";
 
@@ -86,6 +92,10 @@ const startGame = (difficulty) => {
     // Start the game with the selected speed
     gameInterval = setInterval(initGame, gameSpeed);
 }
+
+const next = (next) => {
+    document.getElementById("next").style.display = "none";
+    }
 
 // Main function to update the game state
 const initGame = () => {
