@@ -40,7 +40,7 @@ body {
     grid-template-rows: repeat(30, 1fr);
     grid-template-columns: repeat(30, 1fr);
     background: repeating-conic-gradient(rgb(14, 149, 81) 0% 25%, rgb(14, 113, 62) 0% 50%);
-    background-size: 26px 26px
+    background-size: 39px 39px
 }
 
 .play-board .food {
